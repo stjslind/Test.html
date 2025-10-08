@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Allgäu</title>
+  <style>
+    /* Basis-Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    /* Hintergrundgestaltung */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('villa.jpg') no-repeat center center/cover;
+      /* Ersetze 'villa.jpg' durch deinen Bildpfad */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Overlay für eleganten rotem Touch */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(150, 0, 0, 0.4);
+      /* leicht transparentes dunkles Rot */
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+
+    /* Schriftzug Allgäu im Vordergrund */
+    .title {
+      position: relative;
+      z-index: 2;
+      font-size: 5rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    /* Optionaler Bereich unterhalb des Heldenbilds */
+    .content {
+      padding: 60px 20px;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .content h2 {
+      color: #900; /* edles Rot */
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Responsive Anpass
