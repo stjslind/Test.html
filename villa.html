@@ -6,56 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Villa Allgäu</title>
   <style>
-    /* Basis-Reset */
+    /* Basis Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
     }
 
-    /* Hintergrundgestaltung */
+    /* Hero-Bereich mit Villa-Bild */
     .hero {
       position: relative;
       width: 100%;
       height: 100vh;
-      background: url('villa.jpg') no-repeat center center/cover;
-      /* Ersetze 'villa.jpg' durch deinen Bildpfad */
+      background: url('villa-allgaeu.jpg') no-repeat center center/cover;
+      /* 'villa-allgaeu.jpg' durch dein Bild ersetzen */
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* Overlay für eleganten rotem Touch */
     .hero::after {
       content: '';
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       background: rgba(150, 0, 0, 0.4);
-      /* leicht transparentes dunkles Rot */
+      /* dunkles Rot, etwas transparent, edler Touch */
       mix-blend-mode: multiply;
       z-index: 1;
     }
 
-    /* Schriftzug Allgäu im Vordergrund */
     .title {
       position: relative;
       z-index: 2;
       font-size: 5rem;
       font-weight: bold;
-      color: #fff;
+      color: #ffffff;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       text-transform: uppercase;
       letter-spacing: 4px;
     }
 
-    /* Optionaler Bereich unterhalb des Heldenbilds */
+    /* Inhaltsbereich unter Hero */
     .content {
       padding: 60px 20px;
       background-color: #f8f8f8;
@@ -63,7 +61,7 @@
     }
 
     .content h2 {
-      color: #900; /* edles Rot */
+      color: #900; /* edles Rot als Akzentfarbe */
       margin-bottom: 20px;
       font-size: 2rem;
     }
@@ -74,4 +72,37 @@
       margin-bottom: 15px;
     }
 
-    /* Responsive Anpass
+    /* Responsive Regeln */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 2.5rem;
+      }
+      .content {
+        padding: 40px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="title">Allgäu</div>
+  </section>
+
+  <section class="content">
+    <h2>Willkommen in der Villa Allgäu</h2>
+    <p>Erleben Sie Luxus und Stil inmitten der wunderschönen Allgäuer Landschaft. Unsere Villa verbindet elegantes Ambiente mit dem Charme der Alpen.</p>
+    <p>Ob Entspannung, Naturerlebnisse oder kulturelle Highlights – hier ist jeder Moment etwas Besonderes.</p>
+  </section>
+
+</body>
+
+</html>
